@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TechFest 2026 - DOM Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #E6F7FF;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        p {
+            font-size: 20px;
+            color: black;
+        }
+
+        button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: navy;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TechFest 2026</h1>
+
+    <p id="message">
+        Welcome to the Annual College Symposium.
+    </p>
+
+    <button onclick="changeText()">
+        Click Here
+    </button>
+
+    <script>
+        function changeText() {
+            document.getElementById("message").innerHTML =
+                "Registration for TechFest 2026 is now Open!";
+        }
+    </script>
+
+</body>
+</html>

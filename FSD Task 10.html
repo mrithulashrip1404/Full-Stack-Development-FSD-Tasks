@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TechFest 2026 - Event Listener</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #E6F7FF;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: navy;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TechFest 2026</h1>
+
+    <h2>Annual College Symposium</h2>
+
+    <button id="btn">Register</button>
+
+    <p id="message">Click the button to register.</p>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            document.getElementById("message").innerHTML =
+                "Registration Successful! Welcome to TechFest 2026.";
+        });
+    </script>
+
+</body>
+</html>

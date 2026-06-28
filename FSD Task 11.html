@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TechFest 2026 - Input Validation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #E6F7FF;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TechFest 2026</h1>
+
+    <h2>Participant Registration</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <button id="btn">Submit</button>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+
+            let name = document.getElementById("name").value;
+            let msg = document.getElementById("message");
+
+            if (name.trim() == "") {
+                msg.innerHTML = "Please enter your name.";
+                msg.style.color = "red";
+            }
+            else {
+                msg.innerHTML = "Registration Successful! Welcome, " + name + ".";
+                msg.style.color = "green";
+            }
+
+        });
+    </script>
+
+</body>
+</html>
