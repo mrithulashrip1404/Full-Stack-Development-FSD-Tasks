@@ -8,17 +8,22 @@
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #E6F7FF;
-            margin-top: 100px;
+            margin-top: 80px;
         }
 
         h1 {
             color: darkblue;
         }
 
+        h2 {
+            color: darkred;
+        }
+
         input {
             padding: 10px;
             font-size: 16px;
-            width: 250px;
+            width: 280px;
+            margin: 8px;
         }
 
         button {
@@ -28,7 +33,11 @@
             color: white;
             border: none;
             cursor: pointer;
-            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: navy;
         }
 
         #message {
@@ -38,34 +47,50 @@
         }
     </style>
 </head>
+
 <body>
 
     <h1>TechFest 2026</h1>
 
     <h2>Participant Registration</h2>
 
-    <input type="text" id="name" placeholder="Enter your name">
+    <input type="text" id="name" placeholder="Enter your name"><br>
+
+    <input type="text" id="college" placeholder="Enter your college name"><br>
+
+    <input type="text" id="department" placeholder="Enter your department"><br><br>
 
     <button id="btn">Submit</button>
 
     <p id="message"></p>
 
     <script>
+
         document.getElementById("btn").addEventListener("click", function () {
 
             let name = document.getElementById("name").value;
+            let college = document.getElementById("college").value;
+            let department = document.getElementById("department").value;
+
             let msg = document.getElementById("message");
 
-            if (name.trim() == "") {
-                msg.innerHTML = "Please enter your name.";
+            if (name.trim() == "" ||
+                college.trim() == "" ||
+                department.trim() == "") {
+
+                msg.innerHTML = "Please fill all the fields.";
                 msg.style.color = "red";
             }
             else {
-                msg.innerHTML = "Registration Successful! Welcome, " + name + ".";
+
+                msg.innerHTML =
+                "Registration Successful! Welcome, " + name + ".";
+
                 msg.style.color = "green";
             }
 
         });
+
     </script>
 
 </body>
